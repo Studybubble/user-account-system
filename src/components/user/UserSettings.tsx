@@ -17,9 +17,6 @@ export function UserSettings() {
   const [profileName, setProfileName] = useState(name);
   const [email, setEmail] = useState("user@example.com");
   
-  const [emailNotifications, setEmailNotifications] = useState(true);
-  const [pushNotifications, setPushNotifications] = useState(true);
-  
   const [shareActivity, setShareActivity] = useState(false);
   const [allowDataCollection, setAllowDataCollection] = useState(true);
   
@@ -28,14 +25,6 @@ export function UserSettings() {
     toast({
       title: "Profile Updated",
       description: "Your profile information has been saved successfully.",
-      duration: 3000,
-    });
-  };
-  
-  const handleSavePreferences = () => {
-    toast({
-      title: "Preferences Saved",
-      description: "Your notification preferences have been updated.",
       duration: 3000,
     });
   };
@@ -64,12 +53,6 @@ export function UserSettings() {
                 className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-4 py-2"
               >
                 Profile
-              </TabsTrigger>
-              <TabsTrigger 
-                value="preferences"
-                className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-4 py-2"
-              >
-                Notifications
               </TabsTrigger>
               <TabsTrigger 
                 value="privacy"
@@ -124,51 +107,6 @@ export function UserSettings() {
                 
                 <div className="flex justify-end">
                   <Button onClick={handleSaveProfile}>Save Profile</Button>
-                </div>
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="preferences" className="mt-4">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-medium">Notification Preferences</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Choose how you want to receive notifications
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="space-y-0.5">
-                      <Label htmlFor="email-notifications">Email Notifications</Label>
-                      <p className="text-sm text-muted-foreground">
-                        Receive notifications about events and rewards via email
-                      </p>
-                    </div>
-                    <Switch
-                      id="email-notifications"
-                      checked={emailNotifications}
-                      onCheckedChange={setEmailNotifications}
-                    />
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="space-y-0.5">
-                      <Label htmlFor="push-notifications">Push Notifications</Label>
-                      <p className="text-sm text-muted-foreground">
-                        Receive notifications directly in your browser
-                      </p>
-                    </div>
-                    <Switch
-                      id="push-notifications"
-                      checked={pushNotifications}
-                      onCheckedChange={setPushNotifications}
-                    />
-                  </div>
-                </div>
-                
-                <div className="flex justify-end">
-                  <Button onClick={handleSavePreferences}>Save Preferences</Button>
                 </div>
               </div>
             </TabsContent>
