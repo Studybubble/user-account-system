@@ -62,7 +62,7 @@ export function DashboardSidebar() {
 
   return (
     <Sidebar>
-      <SidebarHeader className="bg-gradient-to-b from-[#E5DEFF] via-[#D6BCFA] to-[#9b87f5]">
+      <SidebarHeader className="bg-gradient-to-b from-purple-50 via-purple-100 to-purple-200">
         <div className="flex items-center gap-2 p-4">
           <div className="flex items-center gap-2 flex-1">
             <Avatar className="h-10 w-10 border-2 border-purple-200">
@@ -71,7 +71,7 @@ export function DashboardSidebar() {
               </AvatarFallback>
             </Avatar>
             <div>
-              <p className="text-sm font-medium text-gray-800">Hello, {name}</p>
+              <p className="text-sm font-medium">Hello, {name}</p>
               <p className="text-xs text-muted-foreground">User Account</p>
             </div>
             <Button
@@ -85,7 +85,7 @@ export function DashboardSidebar() {
           </div>
         </div>
       </SidebarHeader>
-      <SidebarContent className="bg-gradient-to-b from-[#E5DEFF] via-[#D6BCFA] to-[#9b87f5]">
+      <SidebarContent className="bg-gradient-to-b from-purple-50 via-purple-100 to-purple-200">
         <SidebarGroup>
           <SidebarGroupLabel>User Menu</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -104,7 +104,7 @@ export function DashboardSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter className="bg-gradient-to-b from-[#E5DEFF] via-[#D6BCFA] to-[#9b87f5]">
+      <SidebarFooter className="bg-gradient-to-b from-purple-50 via-purple-100 to-purple-200">
         <div className="px-4 py-2 text-xs text-purple-700">
           Events User Dashboard v1.0
         </div>
