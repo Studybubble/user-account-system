@@ -1,89 +1,90 @@
 
 /**
  * Color Variables
- * Beige Color Palette
+ * Light Yellow and Soft Green Color Palette
  */
 
 :root {
   /* Base colors */
-  --background: 36 30% 95%; /* Soft Beige */
-  --foreground: 36 10% 20%; /* Dark Beige */
+  --background: 75 85% 97%; /* Soft Green */
+  --foreground: 80 15% 25%; /* Dark Green */
 
-  --card: 36 30% 95%; /* Soft Beige */
-  --card-foreground: 36 10% 20%; /* Dark Beige */
+  --card: 54 85% 95%; /* Light Yellow */
+  --card-foreground: 80 15% 25%; /* Dark Green */
 
-  --popover: 36 30% 95%; /* Soft Beige */
-  --popover-foreground: 36 10% 20%; /* Dark Beige */
+  --popover: 54 85% 95%; /* Light Yellow */
+  --popover-foreground: 80 15% 25%; /* Dark Green */
 
-  --primary: 36 30% 75%; /* Medium Beige */
-  --primary-foreground: 36 10% 20%; /* Dark Beige */
+  --primary: 75 50% 85%; /* Soft Green */
+  --primary-foreground: 80 15% 25%; /* Dark Green */
 
-  --secondary: 36 20% 90%; /* Light Beige */
-  --secondary-foreground: 36 10% 30%; /* Dark Beige */
+  --secondary: 54 70% 90%; /* Soft Yellow */
+  --secondary-foreground: 80 15% 25%; /* Dark Green */
 
-  --muted: 36 20% 90%; /* Light Beige */
-  --muted-foreground: 36 10% 40%; /* Muted Beige */
+  --muted: 54 50% 90%; /* Soft Yellow */
+  --muted-foreground: 80 25% 40%; /* Muted Green */
 
-  --accent: 36 20% 85%; /* Accent Beige */
-  --accent-foreground: 36 10% 30%; /* Dark Beige */
+  --accent: 75 40% 80%; /* Soft Green */
+  --accent-foreground: 80 15% 25%; /* Dark Green */
 
   --destructive: 0 84.2% 60.2%; /* Kept standard red */
   --destructive-foreground: 0 0% 100%; /* White */
 
-  --border: 36 20% 80%; /* Light Beige Border */
-  --input: 36 20% 80%; /* Light Beige Input */
-  --ring: 36 30% 70%; /* Medium-Dark Beige Ring */
+  --border: 75 30% 75%; /* Light Green Border */
+  --input: 75 30% 75%; /* Light Green Input */
+  --ring: 75 40% 70%; /* Medium Green Ring */
 
   --radius: 0.5rem;
 
-  /* Sidebar colors - Beige theme */
-  --sidebar-background: 36 30% 90%; /* Sidebar Beige */
-  --sidebar-foreground: 36 10% 20%; /* Dark Beige */
-  --sidebar-primary: 36 30% 70%; /* Medium Beige */
-  --sidebar-primary-foreground: 36 10% 20%; /* Dark Beige */
-  --sidebar-accent: 36 20% 85%; /* Light Beige */
-  --sidebar-accent-foreground: 36 10% 30%; /* Dark Beige */
-  --sidebar-border: 36 20% 75%; /* Light Beige Border */
-  --sidebar-ring: 36 30% 70%; /* Medium-Dark Beige */
+  /* Sidebar colors - Yellow and Green theme */
+  --sidebar-background: 54 70% 90%; /* Soft Yellow */
+  --sidebar-foreground: 80 15% 25%; /* Dark Green */
+  --sidebar-primary: 75 50% 85%; /* Soft Green */
+  --sidebar-primary-foreground: 80 15% 25%; /* Dark Green */
+  --sidebar-accent: 54 60% 85%; /* Light Yellow */
+  --sidebar-accent-foreground: 80 15% 25%; /* Dark Green */
+  --sidebar-border: 75 30% 75%; /* Light Green Border */
+  --sidebar-ring: 75 40% 70%; /* Medium Green */
 }
 
 .dark {
-  /* Dark mode colors - maintaining beige theme */
-  --background: 36 10% 15%; /* Dark Beige */
-  --foreground: 36 30% 90%; /* Soft Beige */
+  /* Dark mode colors - maintaining yellow and green theme */
+  --background: 80 15% 15%; /* Dark Green */
+  --foreground: 54 85% 95%; /* Light Yellow */
 
-  --card: 36 10% 15%; /* Dark Beige */
-  --card-foreground: 36 30% 90%; /* Soft Beige */
+  --card: 80 15% 20%; /* Very Dark Green */
+  --card-foreground: 54 85% 95%; /* Light Yellow */
 
-  --popover: 36 10% 15%; /* Dark Beige */
-  --popover-foreground: 36 30% 90%; /* Soft Beige */
+  --popover: 80 15% 20%; /* Very Dark Green */
+  --popover-foreground: 54 85% 95%; /* Light Yellow */
 
-  --primary: 36 20% 60%; /* Medium Beige */
-  --primary-foreground: 36 10% 15%; /* Dark Beige */
+  --primary: 75 40% 40%; /* Dark Green */
+  --primary-foreground: 54 85% 95%; /* Light Yellow */
 
-  --secondary: 36 10% 25%; /* Dark Beige */
-  --secondary-foreground: 36 30% 90%; /* Soft Beige */
+  --secondary: 80 15% 25%; /* Dark Green */
+  --secondary-foreground: 54 85% 95%; /* Light Yellow */
 
-  --muted: 36 10% 25%; /* Dark Beige */
-  --muted-foreground: 36 30% 80%; /* Light Beige */
+  --muted: 80 15% 25%; /* Dark Green */
+  --muted-foreground: 54 85% 90%; /* Soft Yellow */
 
-  --accent: 36 10% 25%; /* Dark Beige */
-  --accent-foreground: 36 30% 90%; /* Soft Beige */
+  --accent: 75 30% 35%; /* Dark Green */
+  --accent-foreground: 54 85% 95%; /* Light Yellow */
 
   --destructive: 0 62.8% 30.6%; /* Dark Red */
-  --destructive-foreground: 36 30% 90%; /* Soft Beige */
+  --destructive-foreground: 54 85% 95%; /* Light Yellow */
 
-  --border: 36 10% 30%; /* Dark Beige Border */
-  --input: 36 10% 30%; /* Dark Beige Input */
-  --ring: 36 20% 60%; /* Medium Beige */
+  --border: 80 15% 30%; /* Very Dark Green Border */
+  --input: 80 15% 30%; /* Very Dark Green Input */
+  --ring: 75 40% 50%; /* Medium Green */
 
-  /* Sidebar colors - dark beige mode */
-  --sidebar-background: 36 10% 20%; /* Very Dark Beige */
-  --sidebar-foreground: 36 30% 90%; /* Soft Beige */
-  --sidebar-primary: 36 20% 55%; /* Medium Beige */
-  --sidebar-primary-foreground: 36 30% 90%; /* Soft Beige */
-  --sidebar-accent: 36 10% 25%; /* Dark Beige */
-  --sidebar-accent-foreground: 36 30% 90%; /* Soft Beige */
-  --sidebar-border: 36 10% 30%; /* Dark Beige Border */
-  --sidebar-ring: 36 20% 60%; /* Medium Beige */
+  /* Sidebar colors - dark yellow and green mode */
+  --sidebar-background: 80 15% 20%; /* Very Dark Green */
+  --sidebar-foreground: 54 85% 95%; /* Light Yellow */
+  --sidebar-primary: 75 40% 40%; /* Dark Green */
+  --sidebar-primary-foreground: 54 85% 95%; /* Light Yellow */
+  --sidebar-accent: 80 15% 25%; /* Dark Green */
+  --sidebar-accent-foreground: 54 85% 95%; /* Light Yellow */
+  --sidebar-border: 80 15% 30%; /* Very Dark Green Border */
+  --sidebar-ring: 75 40% 50%; /* Medium Green */
 }
+

@@ -62,11 +62,11 @@ export function DashboardSidebar() {
 
   return (
     <Sidebar>
-      <SidebarHeader className="bg-gradient-to-b from-beige-50 via-beige-100 to-beige-200">
+      <SidebarHeader className="bg-gradient-to-b from-yellow-50 via-yellow-100 to-green-100">
         <div className="flex items-center gap-2 p-4">
           <div className="flex items-center gap-2 flex-1">
-            <Avatar className="h-10 w-10 border-2 border-beige-200">
-              <AvatarFallback className="bg-beige-500 text-black">
+            <Avatar className="h-10 w-10 border-2 border-green-200">
+              <AvatarFallback className="bg-green-500 text-black">
                 {name.charAt(0)}
               </AvatarFallback>
             </Avatar>
@@ -85,7 +85,7 @@ export function DashboardSidebar() {
           </div>
         </div>
       </SidebarHeader>
-      <SidebarContent className="bg-gradient-to-b from-beige-50 via-beige-100 to-beige-200">
+      <SidebarContent className="bg-gradient-to-b from-yellow-50 via-yellow-100 to-green-100">
         <SidebarGroup>
           <SidebarGroupLabel>User Menu</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -104,11 +104,12 @@ export function DashboardSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter className="bg-gradient-to-b from-beige-50 via-beige-100 to-beige-200">
-        <div className="px-4 py-2 text-xs text-beige-700">
+      <SidebarFooter className="bg-gradient-to-b from-yellow-50 via-yellow-100 to-green-100">
+        <div className="px-4 py-2 text-xs text-green-700">
           Events User Dashboard v1.0
         </div>
       </SidebarFooter>
     </Sidebar>
   );
 }
+
