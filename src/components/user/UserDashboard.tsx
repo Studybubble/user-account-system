@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useUser } from "@/context/UserContext";
 import { useEvents } from "@/context/EventsContext";
@@ -9,7 +8,7 @@ import { Link } from "react-router-dom";
 import { DashboardLayout } from "@/components/DashboardLayout";
 
 export function UserDashboard() {
-  const { name, wallet, registeredEvents } = useUser();
+  const { wallet, registeredEvents } = useUser();
   const { events } = useEvents();
   
   const userEvents = events.filter(event => 
@@ -24,7 +23,7 @@ export function UserDashboard() {
     <DashboardLayout>
       <div className="flex flex-col gap-6">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Welcome, {name}</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Events Dashboard</h1>
           <p className="text-muted-foreground">Manage your events and rewards</p>
         </div>
         
