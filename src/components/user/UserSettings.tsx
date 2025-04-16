@@ -105,7 +105,13 @@ export function UserSettings() {
                 </div>
                 
                 <div className="flex justify-end">
-                  <Button onClick={handleSaveProfile}>Save Profile</Button>
+                  <Button 
+                    variant="default" 
+                    className="bg-[#8B5CF6] hover:bg-[#7E40F9]"
+                    onClick={handleSaveProfile}
+                  >
+                    Save Profile
+                  </Button>
                 </div>
               </div>
             </TabsContent>
@@ -136,7 +142,13 @@ export function UserSettings() {
                 </div>
                 
                 <div className="flex justify-end">
-                  <Button onClick={handleSavePrivacy}>Save Privacy Settings</Button>
+                  <Button 
+                    variant="default" 
+                    className="bg-[#8B5CF6] hover:bg-[#7E40F9]"
+                    onClick={handleSavePrivacy}
+                  >
+                    Save Privacy Settings
+                  </Button>
                 </div>
               </div>
             </TabsContent>
