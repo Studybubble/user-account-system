@@ -94,6 +94,16 @@ export function UserSettings() {
 
                 <div className="grid gap-4">
                   <div className="grid gap-2">
+                    <Label htmlFor="username">Username</Label>
+                    <Input 
+                      id="username"
+                      value={name}
+                      readOnly
+                      className="bg-muted text-muted-foreground cursor-not-allowed"
+                    />
+                  </div>
+
+                  <div className="grid gap-2">
                     <Label htmlFor="display-name">Display Name</Label>
                     <Input 
                       id="display-name"
