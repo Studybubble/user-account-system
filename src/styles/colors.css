@@ -1,87 +1,89 @@
 
 /**
  * Color Variables
- * This file contains all color-related CSS variables
+ * Light Purple and Beige Color Palette
  */
 
 :root {
   /* Base colors */
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  --background: 45 30% 95%; /* Soft Beige */
+  --foreground: 270 20% 20%; /* Deep Purple-Gray */
 
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
+  --card: 45 30% 95%; /* Soft Beige */
+  --card-foreground: 270 20% 20%; /* Deep Purple-Gray */
 
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
+  --popover: 45 30% 95%; /* Soft Beige */
+  --popover-foreground: 270 20% 20%; /* Deep Purple-Gray */
 
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
+  --primary: 270 50% 60%; /* Soft Purple */
+  --primary-foreground: 0 0% 100%; /* White */
 
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 270 30% 90%; /* Very Light Purple */
+  --secondary-foreground: 270 50% 40%; /* Deep Purple */
 
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
+  --muted: 270 30% 90%; /* Very Light Purple */
+  --muted-foreground: 270 20% 40%; /* Muted Purple */
 
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --accent: 270 30% 90%; /* Very Light Purple */
+  --accent-foreground: 270 50% 40%; /* Deep Purple */
 
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive: 0 84.2% 60.2%; /* Kept standard red */
+  --destructive-foreground: 0 0% 100%; /* White */
 
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 222.2 84% 4.9%;
-  
-  /* Sidebar colors - Light Blue with purple undertones */
-  --sidebar-background: 210 53% 95%; /* Soft Light Blue */
-  --sidebar-foreground: 240 20% 25%; /* Deep Purple-Blue */
-  --sidebar-primary: 220 70% 60%; /* Bright Blue with Purple Undertone */
+  --border: 270 20% 85%; /* Light Purple Border */
+  --input: 270 20% 85%; /* Light Purple Input */
+  --ring: 270 50% 60%; /* Soft Purple Ring */
+
+  --radius: 0.5rem;
+
+  /* Sidebar colors - Light Purple with Beige */
+  --sidebar-background: 270 30% 95%; /* Very Soft Purple */
+  --sidebar-foreground: 270 50% 20%; /* Deep Purple */
+  --sidebar-primary: 270 50% 70%; /* Soft Purple */
   --sidebar-primary-foreground: 0 0% 100%; /* White */
-  --sidebar-accent: 220 50% 90%; /* Very Light Blue */
-  --sidebar-accent-foreground: 240 50% 40%; /* Deep Purple */
-  --sidebar-border: 220 40% 85%; /* Light Blue Border */
-  --sidebar-ring: 240 60% 65%; /* Soft Purple-Blue */
+  --sidebar-accent: 270 30% 90%; /* Very Light Purple */
+  --sidebar-accent-foreground: 270 50% 40%; /* Deep Purple */
+  --sidebar-border: 270 20% 85%; /* Light Purple Border */
+  --sidebar-ring: 270 50% 60%; /* Soft Purple */
 }
 
 .dark {
-  /* Base colors - dark mode */
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
+  /* Dark mode colors - maintaining purple and beige theme */
+  --background: 270 20% 10%; /* Dark Purple-Gray */
+  --foreground: 45 30% 95%; /* Soft Beige */
 
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
+  --card: 270 20% 10%; /* Dark Purple-Gray */
+  --card-foreground: 45 30% 95%; /* Soft Beige */
 
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
+  --popover: 270 20% 10%; /* Dark Purple-Gray */
+  --popover-foreground: 45 30% 95%; /* Soft Beige */
 
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
+  --primary: 270 50% 70%; /* Soft Purple */
+  --primary-foreground: 45 30% 95%; /* Soft Beige */
 
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
+  --secondary: 270 20% 20%; /* Dark Purple */
+  --secondary-foreground: 45 30% 95%; /* Soft Beige */
 
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
+  --muted: 270 20% 20%; /* Dark Purple */
+  --muted-foreground: 45 30% 85%; /* Light Beige */
 
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
+  --accent: 270 20% 20%; /* Dark Purple */
+  --accent-foreground: 45 30% 95%; /* Soft Beige */
 
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%; /* Dark Red */
+  --destructive-foreground: 45 30% 95%; /* Soft Beige */
 
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%;
-  
+  --border: 270 20% 25%; /* Dark Purple Border */
+  --input: 270 20% 25%; /* Dark Purple Input */
+  --ring: 270 50% 70%; /* Soft Purple */
+
   /* Sidebar colors - dark mode */
-  --sidebar-background: 220 29% 16%; /* Dark Blue-Purple */
-  --sidebar-foreground: 210 53% 95%; /* Light Blue */
-  --sidebar-primary: 220 70% 50%; /* Bright Blue */
-  --sidebar-primary-foreground: 0 0% 100%; /* White */
-  --sidebar-accent: 220 29% 20%; /* Very Dark Blue-Purple */
-  --sidebar-accent-foreground: 210 53% 95%; /* Light Blue */
-  --sidebar-border: 220 29% 24%; /* Dark Blue Border */
-  --sidebar-ring: 220 70% 60%; /* Bright Blue-Purple */
+  --sidebar-background: 270 20% 15%; /* Very Dark Purple */
+  --sidebar-foreground: 45 30% 95%; /* Soft Beige */
+  --sidebar-primary: 270 50% 60%; /* Soft Purple */
+  --sidebar-primary-foreground: 45 30% 95%; /* Soft Beige */
+  --sidebar-accent: 270 20% 20%; /* Dark Purple */
+  --sidebar-accent-foreground: 45 30% 95%; /* Soft Beige */
+  --sidebar-border: 270 20% 25%; /* Dark Purple Border */
+  --sidebar-ring: 270 50% 70%; /* Soft Purple */
 }
