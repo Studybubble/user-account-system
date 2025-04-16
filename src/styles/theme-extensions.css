@@ -1,21 +1,21 @@
 
 /**
  * Theme Extensions
- * Green Theme Specific CSS
+ * Purple Theme Specific CSS
  */
 
 .glass-effect {
-  @apply backdrop-blur-md bg-green-100/10 border border-green-200/20;
+  @apply backdrop-blur-md bg-purple-100/10 border border-purple-200/20;
 }
 
 .soft-shadow {
-  @apply shadow-md shadow-green-500/5;
+  @apply shadow-md shadow-purple-500/5;
 }
 
 .themed-card {
-  @apply bg-secondary text-secondary-foreground rounded-lg p-4 border border-green-200;
+  @apply bg-secondary text-secondary-foreground rounded-lg p-4 border border-purple-200;
 }
 
 .beige-gradient {
-  @apply bg-gradient-to-r from-green-300 to-green-500;
+  @apply bg-gradient-to-r from-purple-300 to-purple-500;
 }

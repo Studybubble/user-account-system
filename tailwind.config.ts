@@ -48,6 +48,18 @@ export default {
           '800': '#987400',
           '900': '#7E5B00',
         },
+        purple: {
+          '50': '#F5E6FF',   // Very Light Purple
+          '100': '#E6CCFF',  // Light Purple
+          '200': '#D6BCFA',  // Soft Purple
+          '300': '#C69CEB',  // Softer Purple
+          '400': '#B67CDB',  // Muted Purple
+          '500': '#A65CCC',  // Medium Purple
+          '600': '#963BBD',  // Darker Purple
+          '700': '#862AAE',  // Dark Purple
+          '800': '#76199F',  // Very Dark Purple
+          '900': '#660890',  // Deepest Purple
+        },
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))'

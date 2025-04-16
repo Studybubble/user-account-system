@@ -1,89 +1,89 @@
 
 /**
  * Color Variables
- * Green Color Palette
+ * Light Purple Color Palette
  */
 
 :root {
   /* Base colors */
-  --background: 120 50% 95%; /* Very Light Green */
-  --foreground: 120 40% 20%; /* Dark Green */
+  --background: 270 50% 95%; /* Very Light Purple */
+  --foreground: 270 40% 20%; /* Dark Purple */
 
-  --card: 120 40% 97%; /* Soft Mint Green */
-  --card-foreground: 120 40% 20%; /* Dark Green */
+  --card: 270 40% 97%; /* Soft Lavender */
+  --card-foreground: 270 40% 20%; /* Dark Purple */
 
-  --popover: 120 40% 97%; /* Soft Mint Green */
-  --popover-foreground: 120 40% 20%; /* Dark Green */
+  --popover: 270 40% 97%; /* Soft Lavender */
+  --popover-foreground: 270 40% 20%; /* Dark Purple */
 
-  --primary: 120 50% 85%; /* Soft Green */
-  --primary-foreground: 120 40% 20%; /* Dark Green */
+  --primary: 270 50% 85%; /* Soft Purple */
+  --primary-foreground: 270 40% 20%; /* Dark Purple */
 
-  --secondary: 120 30% 90%; /* Pale Green */
-  --secondary-foreground: 120 40% 20%; /* Dark Green */
+  --secondary: 270 30% 90%; /* Pale Purple */
+  --secondary-foreground: 270 40% 20%; /* Dark Purple */
 
-  --muted: 120 20% 90%; /* Very Pale Green */
-  --muted-foreground: 120 25% 40%; /* Muted Green */
+  --muted: 270 20% 90%; /* Very Pale Purple */
+  --muted-foreground: 270 25% 40%; /* Muted Purple */
 
-  --accent: 120 40% 80%; /* Soft Green */
-  --accent-foreground: 120 40% 20%; /* Dark Green */
+  --accent: 270 40% 80%; /* Soft Purple */
+  --accent-foreground: 270 40% 20%; /* Dark Purple */
 
   --destructive: 0 84.2% 60.2%; /* Standard red */
   --destructive-foreground: 0 0% 100%; /* White */
 
-  --border: 120 30% 75%; /* Light Green Border */
-  --input: 120 30% 75%; /* Light Green Input */
-  --ring: 120 40% 70%; /* Medium Green Ring */
+  --border: 270 30% 75%; /* Light Purple Border */
+  --input: 270 30% 75%; /* Light Purple Input */
+  --ring: 270 40% 70%; /* Medium Purple Ring */
 
   --radius: 0.5rem;
 
-  /* Sidebar colors - Green theme */
-  --sidebar-background: 120 40% 95%; /* Very Light Green */
-  --sidebar-foreground: 120 40% 20%; /* Dark Green */
-  --sidebar-primary: 120 50% 85%; /* Soft Green */
-  --sidebar-primary-foreground: 120 40% 20%; /* Dark Green */
-  --sidebar-accent: 120 30% 90%; /* Pale Green */
-  --sidebar-accent-foreground: 120 40% 20%; /* Dark Green */
-  --sidebar-border: 120 30% 75%; /* Light Green Border */
-  --sidebar-ring: 120 40% 70%; /* Medium Green */
+  /* Sidebar colors - Purple theme */
+  --sidebar-background: 270 40% 95%; /* Very Light Purple */
+  --sidebar-foreground: 270 40% 20%; /* Dark Purple */
+  --sidebar-primary: 270 50% 85%; /* Soft Purple */
+  --sidebar-primary-foreground: 270 40% 20%; /* Dark Purple */
+  --sidebar-accent: 270 30% 90%; /* Pale Purple */
+  --sidebar-accent-foreground: 270 40% 20%; /* Dark Purple */
+  --sidebar-border: 270 30% 75%; /* Light Purple Border */
+  --sidebar-ring: 270 40% 70%; /* Medium Purple */
 }
 
 .dark {
-  /* Dark mode colors - Green theme */
-  --background: 120 40% 10%; /* Very Dark Green */
-  --foreground: 120 40% 95%; /* Light Green */
+  /* Dark mode colors - Purple theme */
+  --background: 270 40% 10%; /* Very Dark Purple */
+  --foreground: 270 40% 95%; /* Light Purple */
 
-  --card: 120 40% 15%; /* Dark Green */
-  --card-foreground: 120 40% 95%; /* Light Green */
+  --card: 270 40% 15%; /* Dark Purple */
+  --card-foreground: 270 40% 95%; /* Light Purple */
 
-  --popover: 120 40% 15%; /* Dark Green */
-  --popover-foreground: 120 40% 95%; /* Light Green */
+  --popover: 270 40% 15%; /* Dark Purple */
+  --popover-foreground: 270 40% 95%; /* Light Purple */
 
-  --primary: 120 40% 40%; /* Dark Green */
-  --primary-foreground: 120 40% 95%; /* Light Green */
+  --primary: 270 40% 40%; /* Dark Purple */
+  --primary-foreground: 270 40% 95%; /* Light Purple */
 
-  --secondary: 120 30% 25%; /* Muted Dark Green */
-  --secondary-foreground: 120 40% 95%; /* Light Green */
+  --secondary: 270 30% 25%; /* Muted Dark Purple */
+  --secondary-foreground: 270 40% 95%; /* Light Purple */
 
-  --muted: 120 30% 25%; /* Muted Dark Green */
-  --muted-foreground: 120 40% 90%; /* Soft Green */
+  --muted: 270 30% 25%; /* Muted Dark Purple */
+  --muted-foreground: 270 40% 90%; /* Soft Purple */
 
-  --accent: 120 40% 35%; /* Dark Green */
-  --accent-foreground: 120 40% 95%; /* Light Green */
+  --accent: 270 40% 35%; /* Dark Purple */
+  --accent-foreground: 270 40% 95%; /* Light Purple */
 
   --destructive: 0 62.8% 30.6%; /* Dark Red */
-  --destructive-foreground: 120 40% 95%; /* Light Green */
+  --destructive-foreground: 270 40% 95%; /* Light Purple */
 
-  --border: 120 30% 30%; /* Very Dark Green Border */
-  --input: 120 30% 30%; /* Very Dark Green Input */
-  --ring: 120 40% 50%; /* Medium Green */
+  --border: 270 30% 30%; /* Very Dark Purple Border */
+  --input: 270 30% 30%; /* Very Dark Purple Input */
+  --ring: 270 40% 50%; /* Medium Purple */
 
-  /* Sidebar colors - dark green mode */
-  --sidebar-background: 120 40% 15%; /* Dark Green */
-  --sidebar-foreground: 120 40% 95%; /* Light Green */
-  --sidebar-primary: 120 40% 40%; /* Dark Green */
-  --sidebar-primary-foreground: 120 40% 95%; /* Light Green */
-  --sidebar-accent: 120 30% 25%; /* Muted Dark Green */
-  --sidebar-accent-foreground: 120 40% 95%; /* Light Green */
-  --sidebar-border: 120 30% 30%; /* Very Dark Green Border */
-  --sidebar-ring: 120 40% 50%; /* Medium Green */
+  /* Sidebar colors - dark purple mode */
+  --sidebar-background: 270 40% 15%; /* Dark Purple */
+  --sidebar-foreground: 270 40% 95%; /* Light Purple */
+  --sidebar-primary: 270 40% 40%; /* Dark Purple */
+  --sidebar-primary-foreground: 270 40% 95%; /* Light Purple */
+  --sidebar-accent: 270 30% 25%; /* Muted Dark Purple */
+  --sidebar-accent-foreground: 270 40% 95%; /* Light Purple */
+  --sidebar-border: 270 30% 30%; /* Very Dark Purple Border */
+  --sidebar-ring: 270 40% 50%; /* Medium Purple */
 }
