@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -26,16 +25,16 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         green: {
-          '50': '#F2FCE2',
-          '100': '#E6F8C3',
-          '200': '#D3F2A5',
-          '300': '#BFEC87',
-          '400': '#ACE669',
-          '500': '#99E04B',
-          '600': '#7FC73C',
-          '700': '#65AD2D',
-          '800': '#4B931E',
-          '900': '#317A0F',
+          '50': '#F2FCE2',   // Very Light Green
+          '100': '#E6F8C3',  // Light Green
+          '200': '#D3F2A5',  // Soft Green
+          '300': '#BFEC87',  // Softer Green
+          '400': '#ACE669',  // Muted Green
+          '500': '#99E04B',  // Medium Green
+          '600': '#7FC73C',  // Darker Green
+          '700': '#65AD2D',  // Dark Green
+          '800': '#4B931E',  // Very Dark Green
+          '900': '#317A0F',  // Deepest Green
         },
         yellow: {
           '50': '#FEF7CD',
@@ -119,4 +118,3 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-

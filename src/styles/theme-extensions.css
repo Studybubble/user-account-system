@@ -1,7 +1,7 @@
 
 /**
  * Theme Extensions
- * Yellow and Green Theme Specific CSS
+ * Green Theme Specific CSS
  */
 
 .glass-effect {
@@ -17,6 +17,5 @@
 }
 
 .beige-gradient {
-  @apply bg-gradient-to-r from-green-300 to-yellow-300;
+  @apply bg-gradient-to-r from-green-300 to-green-500;
 }
-

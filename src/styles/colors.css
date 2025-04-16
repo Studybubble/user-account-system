@@ -1,90 +1,89 @@
 
 /**
  * Color Variables
- * Light Yellow and Soft Green Color Palette
+ * Green Color Palette
  */
 
 :root {
   /* Base colors */
-  --background: 75 85% 97%; /* Soft Green */
-  --foreground: 80 15% 25%; /* Dark Green */
+  --background: 120 50% 95%; /* Very Light Green */
+  --foreground: 120 40% 20%; /* Dark Green */
 
-  --card: 54 85% 95%; /* Light Yellow */
-  --card-foreground: 80 15% 25%; /* Dark Green */
+  --card: 120 40% 97%; /* Soft Mint Green */
+  --card-foreground: 120 40% 20%; /* Dark Green */
 
-  --popover: 54 85% 95%; /* Light Yellow */
-  --popover-foreground: 80 15% 25%; /* Dark Green */
+  --popover: 120 40% 97%; /* Soft Mint Green */
+  --popover-foreground: 120 40% 20%; /* Dark Green */
 
-  --primary: 75 50% 85%; /* Soft Green */
-  --primary-foreground: 80 15% 25%; /* Dark Green */
+  --primary: 120 50% 85%; /* Soft Green */
+  --primary-foreground: 120 40% 20%; /* Dark Green */
 
-  --secondary: 54 70% 90%; /* Soft Yellow */
-  --secondary-foreground: 80 15% 25%; /* Dark Green */
+  --secondary: 120 30% 90%; /* Pale Green */
+  --secondary-foreground: 120 40% 20%; /* Dark Green */
 
-  --muted: 54 50% 90%; /* Soft Yellow */
-  --muted-foreground: 80 25% 40%; /* Muted Green */
+  --muted: 120 20% 90%; /* Very Pale Green */
+  --muted-foreground: 120 25% 40%; /* Muted Green */
 
-  --accent: 75 40% 80%; /* Soft Green */
-  --accent-foreground: 80 15% 25%; /* Dark Green */
+  --accent: 120 40% 80%; /* Soft Green */
+  --accent-foreground: 120 40% 20%; /* Dark Green */
 
-  --destructive: 0 84.2% 60.2%; /* Kept standard red */
+  --destructive: 0 84.2% 60.2%; /* Standard red */
   --destructive-foreground: 0 0% 100%; /* White */
 
-  --border: 75 30% 75%; /* Light Green Border */
-  --input: 75 30% 75%; /* Light Green Input */
-  --ring: 75 40% 70%; /* Medium Green Ring */
+  --border: 120 30% 75%; /* Light Green Border */
+  --input: 120 30% 75%; /* Light Green Input */
+  --ring: 120 40% 70%; /* Medium Green Ring */
 
   --radius: 0.5rem;
 
-  /* Sidebar colors - Yellow and Green theme */
-  --sidebar-background: 54 70% 90%; /* Soft Yellow */
-  --sidebar-foreground: 80 15% 25%; /* Dark Green */
-  --sidebar-primary: 75 50% 85%; /* Soft Green */
-  --sidebar-primary-foreground: 80 15% 25%; /* Dark Green */
-  --sidebar-accent: 54 60% 85%; /* Light Yellow */
-  --sidebar-accent-foreground: 80 15% 25%; /* Dark Green */
-  --sidebar-border: 75 30% 75%; /* Light Green Border */
-  --sidebar-ring: 75 40% 70%; /* Medium Green */
+  /* Sidebar colors - Green theme */
+  --sidebar-background: 120 40% 95%; /* Very Light Green */
+  --sidebar-foreground: 120 40% 20%; /* Dark Green */
+  --sidebar-primary: 120 50% 85%; /* Soft Green */
+  --sidebar-primary-foreground: 120 40% 20%; /* Dark Green */
+  --sidebar-accent: 120 30% 90%; /* Pale Green */
+  --sidebar-accent-foreground: 120 40% 20%; /* Dark Green */
+  --sidebar-border: 120 30% 75%; /* Light Green Border */
+  --sidebar-ring: 120 40% 70%; /* Medium Green */
 }
 
 .dark {
-  /* Dark mode colors - maintaining yellow and green theme */
-  --background: 80 15% 15%; /* Dark Green */
-  --foreground: 54 85% 95%; /* Light Yellow */
+  /* Dark mode colors - Green theme */
+  --background: 120 40% 10%; /* Very Dark Green */
+  --foreground: 120 40% 95%; /* Light Green */
 
-  --card: 80 15% 20%; /* Very Dark Green */
-  --card-foreground: 54 85% 95%; /* Light Yellow */
+  --card: 120 40% 15%; /* Dark Green */
+  --card-foreground: 120 40% 95%; /* Light Green */
 
-  --popover: 80 15% 20%; /* Very Dark Green */
-  --popover-foreground: 54 85% 95%; /* Light Yellow */
+  --popover: 120 40% 15%; /* Dark Green */
+  --popover-foreground: 120 40% 95%; /* Light Green */
 
-  --primary: 75 40% 40%; /* Dark Green */
-  --primary-foreground: 54 85% 95%; /* Light Yellow */
+  --primary: 120 40% 40%; /* Dark Green */
+  --primary-foreground: 120 40% 95%; /* Light Green */
 
-  --secondary: 80 15% 25%; /* Dark Green */
-  --secondary-foreground: 54 85% 95%; /* Light Yellow */
+  --secondary: 120 30% 25%; /* Muted Dark Green */
+  --secondary-foreground: 120 40% 95%; /* Light Green */
 
-  --muted: 80 15% 25%; /* Dark Green */
-  --muted-foreground: 54 85% 90%; /* Soft Yellow */
+  --muted: 120 30% 25%; /* Muted Dark Green */
+  --muted-foreground: 120 40% 90%; /* Soft Green */
 
-  --accent: 75 30% 35%; /* Dark Green */
-  --accent-foreground: 54 85% 95%; /* Light Yellow */
+  --accent: 120 40% 35%; /* Dark Green */
+  --accent-foreground: 120 40% 95%; /* Light Green */
 
   --destructive: 0 62.8% 30.6%; /* Dark Red */
-  --destructive-foreground: 54 85% 95%; /* Light Yellow */
+  --destructive-foreground: 120 40% 95%; /* Light Green */
 
-  --border: 80 15% 30%; /* Very Dark Green Border */
-  --input: 80 15% 30%; /* Very Dark Green Input */
-  --ring: 75 40% 50%; /* Medium Green */
+  --border: 120 30% 30%; /* Very Dark Green Border */
+  --input: 120 30% 30%; /* Very Dark Green Input */
+  --ring: 120 40% 50%; /* Medium Green */
 
-  /* Sidebar colors - dark yellow and green mode */
-  --sidebar-background: 80 15% 20%; /* Very Dark Green */
-  --sidebar-foreground: 54 85% 95%; /* Light Yellow */
-  --sidebar-primary: 75 40% 40%; /* Dark Green */
-  --sidebar-primary-foreground: 54 85% 95%; /* Light Yellow */
-  --sidebar-accent: 80 15% 25%; /* Dark Green */
-  --sidebar-accent-foreground: 54 85% 95%; /* Light Yellow */
-  --sidebar-border: 80 15% 30%; /* Very Dark Green Border */
-  --sidebar-ring: 75 40% 50%; /* Medium Green */
+  /* Sidebar colors - dark green mode */
+  --sidebar-background: 120 40% 15%; /* Dark Green */
+  --sidebar-foreground: 120 40% 95%; /* Light Green */
+  --sidebar-primary: 120 40% 40%; /* Dark Green */
+  --sidebar-primary-foreground: 120 40% 95%; /* Light Green */
+  --sidebar-accent: 120 30% 25%; /* Muted Dark Green */
+  --sidebar-accent-foreground: 120 40% 95%; /* Light Green */
+  --sidebar-border: 120 30% 30%; /* Very Dark Green Border */
+  --sidebar-ring: 120 40% 50%; /* Medium Green */
 }
-
