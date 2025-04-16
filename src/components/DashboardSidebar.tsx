@@ -66,7 +66,7 @@ export function DashboardSidebar() {
         <div className="flex items-center gap-2 p-4">
           <div className="flex items-center gap-2 flex-1">
             <Avatar className="h-10 w-10 border-2 border-purple-200">
-              <AvatarFallback className="bg-purple-500 text-black">
+              <AvatarFallback className="bg-purple-500 text-white">
                 {name.charAt(0)}
               </AvatarFallback>
             </Avatar>
@@ -80,7 +80,7 @@ export function DashboardSidebar() {
               className="ml-auto"
               onClick={handleSignOut}
             >
-              <LogOut className="h-4 w-4 text-black" />
+              <LogOut className="h-4 w-4" />
             </Button>
           </div>
         </div>
@@ -94,7 +94,7 @@ export function DashboardSidebar() {
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <a href={item.url} className="flex gap-3 items-center">
-                      <item.icon className="h-5 w-5 text-black" />
+                      <item.icon className="h-5 w-5" />
                       <span>{item.title}</span>
                     </a>
                   </SidebarMenuButton>

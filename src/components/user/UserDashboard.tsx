@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useUser } from "@/context/UserContext";
 import { useEvents } from "@/context/EventsContext";
@@ -32,7 +31,7 @@ export function UserDashboard() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Calendar className="h-5 w-5 text-blue-500" />
+                <Calendar className="h-5 w-5 text-purple-500" />
                 <span>My Events</span>
               </CardTitle>
               <CardDescription>Your upcoming registered events</CardDescription>
@@ -52,7 +51,7 @@ export function UserDashboard() {
                     </div>
                   ))}
                   {upcomingEvents.length > 3 && (
-                    <Link to="/user/events" className="text-sm text-blue-600 hover:underline block text-center">
+                    <Link to="/user/events" className="text-sm text-purple-600 hover:underline block text-center">
                       View all events
                     </Link>
                   )}
@@ -71,15 +70,15 @@ export function UserDashboard() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Wallet className="h-5 w-5 text-blue-500" />
+                <Wallet className="h-5 w-5 text-purple-500" />
                 <span>Points Wallet</span>
               </CardTitle>
               <CardDescription>Your rewards and available discounts</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="mb-6 bg-blue-50 rounded-lg p-4 text-center">
-                <p className="text-sm text-blue-700 mb-1">Available Points</p>
-                <p className="text-3xl font-bold text-blue-800">{wallet.points}</p>
+              <div className="mb-6 bg-purple-50 rounded-lg p-4 text-center">
+                <p className="text-sm text-purple-700 mb-1">Available Points</p>
+                <p className="text-3xl font-bold text-purple-800">{wallet.points}</p>
               </div>
               
               <h4 className="font-medium mb-2 text-sm">Available Discounts</h4>
