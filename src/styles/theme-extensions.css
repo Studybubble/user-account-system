@@ -1,0 +1,23 @@
+
+/**
+ * Theme Extensions
+ * Additional theme-specific CSS that can be imported where needed
+ */
+
+.glass-effect {
+  @apply backdrop-blur-md bg-white/10 border border-white/20;
+}
+
+.soft-shadow {
+  @apply shadow-md shadow-black/5;
+}
+
+/* Blue-purple themed cards */
+.themed-card {
+  @apply bg-sidebar-accent text-sidebar-foreground rounded-lg p-4 border border-sidebar-border;
+}
+
+/* Blue-purple gradient for special elements */
+.blue-purple-gradient {
+  @apply bg-gradient-to-r from-blue-400 to-purple-400;
+}
