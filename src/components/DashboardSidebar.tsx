@@ -1,12 +1,9 @@
 
 import {
   LayoutDashboard,
-  Users,
   CalendarDays,
-  Plus,
   Settings,
   LogOut,
-  User,
   Wallet,
   Search
 } from "lucide-react";
@@ -27,34 +24,6 @@ import {
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { useUser } from "@/context/UserContext";
-
-const adminNavItems = [
-  {
-    title: "Dashboard",
-    url: "/",
-    icon: LayoutDashboard,
-  },
-  {
-    title: "Events",
-    url: "/events",
-    icon: CalendarDays,
-  },
-  {
-    title: "Create Event",
-    url: "/events/create",
-    icon: Plus,
-  },
-  {
-    title: "Attendees",
-    url: "/attendees",
-    icon: Users,
-  },
-  {
-    title: "Settings",
-    url: "/settings",
-    icon: Settings,
-  },
-];
 
 const userNavItems = [
   {
@@ -85,8 +54,7 @@ const userNavItems = [
 ];
 
 export function DashboardSidebar() {
-  const { name, role } = useUser();
-  const navItems = role === "admin" ? adminNavItems : userNavItems;
+  const { name } = useUser();
 
   const handleSignOut = () => {
     console.log("Sign out clicked");
@@ -104,7 +72,7 @@ export function DashboardSidebar() {
             </Avatar>
             <div>
               <p className="text-sm font-medium">Hello, {name}</p>
-              <p className="text-xs text-muted-foreground capitalize">{role} Account</p>
+              <p className="text-xs text-muted-foreground">User Account</p>
             </div>
             <Button
               variant="ghost"
@@ -119,10 +87,10 @@ export function DashboardSidebar() {
       </SidebarHeader>
       <SidebarContent className="bg-gradient-to-b from-purple-50 via-purple-100 to-purple-200">
         <SidebarGroup>
-          <SidebarGroupLabel>{role === "admin" ? "Admin Menu" : "User Menu"}</SidebarGroupLabel>
+          <SidebarGroupLabel>User Menu</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {navItems.map((item) => (
+              {userNavItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <a href={item.url} className="flex gap-3 items-center">
@@ -138,7 +106,7 @@ export function DashboardSidebar() {
       </SidebarContent>
       <SidebarFooter className="bg-gradient-to-b from-purple-50 via-purple-100 to-purple-200">
         <div className="px-4 py-2 text-xs text-purple-700">
-          Events {role === "admin" ? "Admin" : "User"} Dashboard v1.0
+          Events User Dashboard v1.0
         </div>
       </SidebarFooter>
     </Sidebar>

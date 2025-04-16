@@ -3,11 +3,9 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { useUser } from "@/context/UserContext";
 
 const NotFound = () => {
   const location = useLocation();
-  const { role } = useUser();
 
   useEffect(() => {
     console.error(
@@ -15,8 +13,6 @@ const NotFound = () => {
       location.pathname
     );
   }, [location.pathname]);
-
-  const homeUrl = role === "admin" ? "/" : "/user";
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
@@ -26,7 +22,7 @@ const NotFound = () => {
         <p className="text-gray-600 mb-8">
           Sorry, we couldn't find the page you're looking for. It might have been moved or doesn't exist.
         </p>
-        <Link to={homeUrl}>
+        <Link to="/user">
           <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
             Return to Dashboard
           </Button>

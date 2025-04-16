@@ -14,8 +14,6 @@ interface UserWallet {
 interface UserContextType {
   name: string;
   setName: (name: string) => void;
-  role: "admin" | "user";
-  setRole: (role: "admin" | "user") => void;
   wallet: UserWallet;
   addPoints: (points: number) => void;
   redeemDiscount: (discountId: string) => boolean;
@@ -25,10 +23,8 @@ interface UserContextType {
 }
 
 const defaultContext: UserContextType = {
-  name: "Admin",
+  name: "John Doe",
   setName: () => {},
-  role: "admin",
-  setRole: () => {},
   wallet: {
     points: 0,
     discounts: []
@@ -43,8 +39,7 @@ const defaultContext: UserContextType = {
 const UserContext = createContext<UserContextType>(defaultContext);
 
 export function UserProvider({ children }: { children: React.ReactNode }) {
-  const [name, setName] = useState("Admin");
-  const [role, setRole] = useState<"admin" | "user">("admin");
+  const [name, setName] = useState("John Doe");
   const [wallet, setWallet] = useState<UserWallet>({
     points: 100, // Starting with some points
     discounts: [
@@ -88,8 +83,6 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     <UserContext.Provider value={{
       name,
       setName,
-      role,
-      setRole,
       wallet,
       addPoints,
       redeemDiscount,
