@@ -1,11 +1,11 @@
-
 import {
   LayoutDashboard,
   CalendarDays,
   Settings,
   LogOut,
   Wallet,
-  Search
+  Search,
+  User
 } from "lucide-react";
 
 import {
@@ -24,6 +24,7 @@ import {
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { useUser } from "@/context/UserContext";
+import { ExternalLink } from "lucide-react";
 
 const userNavItems = [
   {
@@ -64,24 +65,18 @@ export function DashboardSidebar() {
     <Sidebar>
       <SidebarHeader className="bg-gradient-to-b from-purple-50 via-purple-100 to-purple-200">
         <div className="flex items-center gap-2 p-4">
-          <div className="flex items-center gap-2 flex-1 bg-purple-50 rounded-lg p-3 border border-purple-100 shadow-sm">
-            <Avatar className="h-10 w-10 border-2 border-purple-200">
-              <AvatarFallback className="bg-purple-500 text-white">
-                {name.charAt(0)}
+          <div className="flex items-center gap-2 flex-1 bg-purple-100 rounded-lg p-3 border border-purple-200 shadow-sm">
+            <Avatar className="h-10 w-10">
+              <AvatarFallback className="bg-purple-300 text-purple-800">
+                <User className="h-6 w-6" />
               </AvatarFallback>
             </Avatar>
-            <div>
-              <p className="text-sm font-medium text-blue-800">Hello, {name}</p>
-              <p className="text-xs text-muted-foreground">User Account</p>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center justify-between">
+                <p className="text-sm font-medium text-gray-800 truncate">Hello, {name}</p>
+                <ExternalLink className="h-4 w-4 text-purple-600" />
+              </div>
             </div>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="ml-auto"
-              onClick={handleSignOut}
-            >
-              <LogOut className="h-4 w-4" />
-            </Button>
           </div>
         </div>
       </SidebarHeader>
