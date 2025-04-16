@@ -17,7 +17,6 @@ export function UserSettings() {
   const [profileName, setProfileName] = useState(name);
   const [email, setEmail] = useState("user@example.com");
   
-  const [shareActivity, setShareActivity] = useState(false);
   const [allowDataCollection, setAllowDataCollection] = useState(true);
   
   const handleSaveProfile = () => {
@@ -121,20 +120,6 @@ export function UserSettings() {
                 </div>
 
                 <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="space-y-0.5">
-                      <Label htmlFor="share-activity">Share My Activity</Label>
-                      <p className="text-sm text-muted-foreground">
-                        Allow others to see which events you're attending
-                      </p>
-                    </div>
-                    <Switch
-                      id="share-activity"
-                      checked={shareActivity}
-                      onCheckedChange={setShareActivity}
-                    />
-                  </div>
-                  
                   <div className="flex items-center justify-between">
                     <div className="space-y-0.5">
                       <Label htmlFor="data-collection">Data Collection</Label>
