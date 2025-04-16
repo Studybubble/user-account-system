@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useUser } from "@/context/UserContext";
 import { Card } from "@/components/ui/card";
@@ -15,15 +14,12 @@ export function UserSettings() {
   const { toast } = useToast();
   const [activeTab, setActiveTab] = useState("profile");
   
-  // Profile state
   const [profileName, setProfileName] = useState(name);
   const [email, setEmail] = useState("user@example.com");
   
-  // Preferences state
   const [emailNotifications, setEmailNotifications] = useState(true);
   const [pushNotifications, setPushNotifications] = useState(true);
   
-  // Privacy state
   const [shareActivity, setShareActivity] = useState(false);
   const [allowDataCollection, setAllowDataCollection] = useState(true);
   
@@ -101,6 +97,9 @@ export function UserSettings() {
                       readOnly
                       className="bg-muted text-muted-foreground cursor-not-allowed"
                     />
+                    <p className="text-sm text-muted-foreground">
+                      Your username cannot be changed. It is unique to your account.
+                    </p>
                   </div>
 
                   <div className="grid gap-2">
