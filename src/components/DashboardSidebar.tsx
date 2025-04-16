@@ -62,11 +62,11 @@ export function DashboardSidebar() {
 
   return (
     <Sidebar>
-      <SidebarHeader className="bg-gradient-to-b from-purple-50 via-purple-100 to-purple-200">
+      <SidebarHeader className="bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <div className="flex items-center gap-2 p-4">
           <div className="flex items-center gap-2 flex-1">
-            <Avatar className="h-10 w-10 border-2 border-purple-200">
-              <AvatarFallback className="bg-purple-500 text-white">
+            <Avatar className="h-10 w-10 border-2 border-blue-200">
+              <AvatarFallback className="bg-blue-500 text-white">
                 {name.charAt(0)}
               </AvatarFallback>
             </Avatar>
@@ -85,7 +85,7 @@ export function DashboardSidebar() {
           </div>
         </div>
       </SidebarHeader>
-      <SidebarContent className="bg-gradient-to-b from-purple-50 via-purple-100 to-purple-200">
+      <SidebarContent className="bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
         <SidebarGroup>
           <SidebarGroupLabel>User Menu</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -94,7 +94,7 @@ export function DashboardSidebar() {
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <a href={item.url} className="flex gap-3 items-center">
-                      <item.icon className="h-5 w-5" />
+                      <item.icon className="h-5 w-5 text-blue-600" />
                       <span>{item.title}</span>
                     </a>
                   </SidebarMenuButton>
@@ -104,8 +104,8 @@ export function DashboardSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter className="bg-gradient-to-b from-purple-50 via-purple-100 to-purple-200">
-        <div className="px-4 py-2 text-xs text-purple-700">
+      <SidebarFooter className="bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200">
+        <div className="px-4 py-2 text-xs text-blue-700">
           Events User Dashboard v1.0
         </div>
       </SidebarFooter>
