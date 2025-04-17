@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useUser } from "@/context/UserContext";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -65,18 +64,6 @@ export function UserWallet() {
                     <Coins className="h-4 w-4 text-green-600" />
                   </div>
                   <span>Attend events: <span className="font-medium">+10 points</span> per event</span>
-                </li>
-                <li className="flex gap-2">
-                  <div className="bg-green-100 rounded-full p-1">
-                    <Coins className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span>Register early: <span className="font-medium">+5 points</span> for registrations 7+ days before event</span>
-                </li>
-                <li className="flex gap-2">
-                  <div className="bg-green-100 rounded-full p-1">
-                    <Coins className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span>Bring friends: <span className="font-medium">+3 points</span> per friend who registers</span>
                 </li>
               </ul>
             </CardContent>
