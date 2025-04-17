@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useUser } from "@/context/UserContext";
 import { useEvents } from "@/context/EventsContext";
@@ -103,18 +104,6 @@ export function UserDashboard() {
               </div>
             </CardContent>
           </Card>
-        </div>
-        
-        <div className="flex gap-4 justify-center mt-4">
-          <Link to="/user/wallet">
-            <Button variant="secondary">
-              <Wallet className="mr-2 h-4 w-4" />
-              View Wallet
-            </Button>
-          </Link>
-          <Link to="/user/settings">
-            <Button variant="outline">User Settings</Button>
-          </Link>
         </div>
       </div>
     </DashboardLayout>
