@@ -1,4 +1,3 @@
-
 import {
   LayoutDashboard,
   CalendarDays,
@@ -35,11 +34,6 @@ const userNavItems = [
     title: "Discover Events",
     url: "/user/discover",
     icon: Search,
-  },
-  {
-    title: "My Events",
-    url: "/user/events",
-    icon: CalendarDays,
   },
   {
     title: "My Wallet",
