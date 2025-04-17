@@ -1,11 +1,8 @@
 
 import {
   LayoutDashboard,
-  CalendarDays,
-  Settings,
-  LogOut,
-  Wallet,
-  Search
+  Search,
+  LogOut
 } from "lucide-react";
 
 import {
@@ -36,16 +33,6 @@ const userNavItems = [
     url: "/user/discover",
     icon: Search,
   },
-  {
-    title: "My Wallet",
-    url: "/user/wallet",
-    icon: Wallet,
-  },
-  {
-    title: "Settings",
-    url: "/user/settings",
-    icon: Settings,
-  },
 ];
 
 export function DashboardSidebar() {
@@ -57,22 +44,22 @@ export function DashboardSidebar() {
 
   return (
     <Sidebar>
-      <SidebarHeader className="bg-gradient-to-r from-purple-500 via-purple-400 to-blue-400">
+      <SidebarHeader className="bg-gradient-to-r from-green-200 via-purple-200 to-blue-200">
         <div className="flex items-center gap-2 p-4">
           <div className="flex items-center gap-2 flex-1">
             <Avatar className="h-10 w-10 border-2 border-white/20">
-              <AvatarFallback className="bg-white/10 text-white">
+              <AvatarFallback className="bg-white/10 text-gray-800">
                 {name.charAt(0)}
               </AvatarFallback>
             </Avatar>
             <div>
-              <p className="text-sm font-medium text-white">Hello, {name}</p>
-              <p className="text-xs text-white/80">User Account</p>
+              <p className="text-sm font-medium text-gray-800">Hello, {name}</p>
+              <p className="text-xs text-gray-600">User Account</p>
             </div>
             <Button
               variant="ghost"
               size="icon"
-              className="ml-auto text-white hover:bg-white/10"
+              className="ml-auto text-gray-700 hover:bg-white/10"
               onClick={handleSignOut}
             >
               <LogOut className="h-4 w-4" />
@@ -80,14 +67,14 @@ export function DashboardSidebar() {
           </div>
         </div>
       </SidebarHeader>
-      <SidebarContent className="bg-gradient-to-b from-purple-500 to-blue-400">
+      <SidebarContent className="bg-gradient-to-b from-green-100 to-purple-100">
         <SidebarGroup>
-          <SidebarGroupLabel className="text-white/90">User Menu</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-gray-700">User Menu</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {userNavItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild className="text-white hover:bg-white/10">
+                  <SidebarMenuButton asChild className="text-gray-800 hover:bg-white/10">
                     <a href={item.url} className="flex gap-3 items-center">
                       <item.icon className="h-5 w-5" />
                       <span>{item.title}</span>
@@ -99,8 +86,8 @@ export function DashboardSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter className="bg-gradient-to-t from-blue-400 to-blue-500">
-        <div className="px-4 py-2 text-xs text-white/80">
+      <SidebarFooter className="bg-gradient-to-t from-blue-100 to-green-100">
+        <div className="px-4 py-2 text-xs text-gray-600">
           Events User Dashboard v1.0
         </div>
       </SidebarFooter>
