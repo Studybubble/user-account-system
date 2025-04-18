@@ -2,11 +2,13 @@
 import {
   LayoutDashboard,
   CalendarDays,
-  Search
+  Search,
+  LogOut
 } from "lucide-react";
 
 import {
   Sidebar,
+  SidebarHeader,
   SidebarContent,
   SidebarFooter,
   SidebarGroup,
