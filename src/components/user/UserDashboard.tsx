@@ -4,12 +4,12 @@ import { useUser } from "@/context/UserContext";
 import { useEvents } from "@/context/EventsContext";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Calendar, Wallet } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import { DashboardLayout } from "@/components/DashboardLayout";
 
 export function UserDashboard() {
-  const { wallet, registeredEvents } = useUser();
+  const { registeredEvents } = useUser();
   const { events } = useEvents();
   
   const userEvents = events.filter(event => 
@@ -32,7 +32,7 @@ export function UserDashboard() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Calendar className="h-5 w-5 text-purple-500" />
+                <Calendar className="h-5 w-5 text-cyan-500" />
                 <span>My Events</span>
               </CardTitle>
               <CardDescription>Your upcoming registered events</CardDescription>
@@ -52,7 +52,7 @@ export function UserDashboard() {
                     </div>
                   ))}
                   {upcomingEvents.length > 3 && (
-                    <Link to="/user/events" className="text-sm text-purple-600 hover:underline block text-center">
+                    <Link to="/user/events" className="text-sm text-cyan-600 hover:underline block text-center">
                       View all events
                     </Link>
                   )}
@@ -65,43 +65,6 @@ export function UserDashboard() {
                   </Link>
                 </div>
               )}
-            </CardContent>
-          </Card>
-          
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Wallet className="h-5 w-5 text-purple-500" />
-                <span>Points Wallet</span>
-              </CardTitle>
-              <CardDescription>Your rewards and available discounts</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="mb-6 bg-purple-50 rounded-lg p-4 text-center">
-                <p className="text-sm text-purple-700 mb-1">Available Points</p>
-                <p className="text-3xl font-bold text-purple-800">{wallet.points}</p>
-              </div>
-              
-              <h4 className="font-medium mb-2 text-sm">Available Discounts</h4>
-              <div className="space-y-2">
-                {wallet.discounts.map(discount => (
-                  <div key={discount.id} className="border rounded-md p-3 flex justify-between items-center">
-                    <div>
-                      <p className="font-medium">{discount.name}</p>
-                      <p className="text-xs text-muted-foreground">Cost: {discount.pointCost} points</p>
-                    </div>
-                    <Link to="/user/wallet">
-                      <Button 
-                        variant="outline" 
-                        size="sm"
-                        disabled={wallet.points < discount.pointCost}
-                      >
-                        Redeem
-                      </Button>
-                    </Link>
-                  </div>
-                ))}
-              </div>
             </CardContent>
           </Card>
         </div>

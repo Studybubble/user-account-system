@@ -12,7 +12,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     <SidebarProvider>
       <div className="min-h-screen flex w-full">
         <DashboardSidebar />
-        <main className="flex-1 flex flex-col min-h-screen bg-gray-50">
+        <main className="flex-1 flex flex-col min-h-screen bg-[#C8FFFF]/10">
           <div className="flex flex-col gap-4 p-4 sm:p-8 lg:p-12">
             <div className="flex justify-start">
               <SidebarTrigger />
