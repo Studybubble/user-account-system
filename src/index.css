@@ -34,14 +34,21 @@
 
     --radius: 0.5rem;
 
-    --sidebar-background: 190 100% 85%; /* Corresponds to #C8FFFF */
+    --sidebar-background: 0 0% 98%;
+
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 190 100% 85%;
-    --sidebar-primary-foreground: 240 5.9% 10%;
-    --sidebar-accent: 190 100% 90%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
     --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 190 50% 90%;
-    --sidebar-ring: 190 100% 70%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
