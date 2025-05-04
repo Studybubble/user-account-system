@@ -88,7 +88,7 @@ export function DashboardSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter className="bg-gradient-to-b from-[#C8FFFF] via-[#C8FFFF] to-[#C8FFFF]">
-        {/* Removed version text */}
+        {/* Footer content (empty) */}
       </SidebarFooter>
     </Sidebar>
   );
