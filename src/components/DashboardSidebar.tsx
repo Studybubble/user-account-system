@@ -99,8 +99,8 @@ export function DashboardSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter>
-        {/* Empty footer - removed "Events User Dashboard v1.0" text */}
+      <SidebarFooter className="bg-purple-100 h-12">
+        {/* Empty purple footer */}
       </SidebarFooter>
     </Sidebar>
   );
