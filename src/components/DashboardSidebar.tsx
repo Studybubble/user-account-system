@@ -12,7 +12,6 @@ import {
   Sidebar,
   SidebarHeader,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
   SidebarGroupLabel,
   SidebarGroupContent,
@@ -99,9 +98,6 @@ export function DashboardSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter className="bg-purple-100 h-12">
-        {/* Empty purple footer */}
-      </SidebarFooter>
     </Sidebar>
   );
 }
