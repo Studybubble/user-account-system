@@ -1,3 +1,4 @@
+
 import {
   LayoutDashboard,
   CalendarDays,
@@ -99,9 +100,7 @@ export function DashboardSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter className="bg-gradient-to-b from-purple-50 via-purple-100 to-purple-200">
-        <div className="px-4 py-2 text-xs text-purple-700">
-          Events User Dashboard v1.0
-        </div>
+        {/* Empty footer - removed "Events User Dashboard v1.0" text */}
       </SidebarFooter>
     </Sidebar>
   );
