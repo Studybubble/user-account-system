@@ -99,7 +99,7 @@ export function DashboardSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter className="bg-gradient-to-b from-purple-50 via-purple-100 to-purple-200">
+      <SidebarFooter>
         {/* Empty footer - removed "Events User Dashboard v1.0" text */}
       </SidebarFooter>
     </Sidebar>
