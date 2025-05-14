@@ -1,8 +1,6 @@
 
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { Button } from "../components/ui/button";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 const NotFound = () => {
   const location = useLocation();
@@ -23,9 +21,9 @@ const NotFound = () => {
           Sorry, we couldn't find the page you're looking for. It might have been moved or doesn't exist.
         </p>
         <Link to="/user">
-          <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+          <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 text-lg">
             Return to Dashboard
-          </Button>
+          </button>
         </Link>
       </div>
     </div>

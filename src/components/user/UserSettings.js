@@ -2,153 +2,115 @@
 import React, { useState } from 'react';
 import { useUser } from '../../context/UserContext';
 import { DashboardLayout } from '../DashboardLayout';
-import { Button } from '../ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card';
-import { toast } from '../ui/toast';
 
 export function UserSettings() {
   const { name, setName } = useUser();
-  const [editName, setEditName] = useState(name);
-  const [notifications, setNotifications] = useState({
-    email: true,
-    app: true,
-    marketing: false
-  });
-  
-  const handleUpdateProfile = (e) => {
+  const [newName, setNewName] = useState(name);
+  const [isEditing, setIsEditing] = useState(false);
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setName(editName);
-    toast({
-      title: "Profile Updated",
-      description: "Your profile has been updated successfully.",
-    });
-  };
-  
-  const handleNotificationChange = (type) => {
-    setNotifications(prev => ({
-      ...prev,
-      [type]: !prev[type]
-    }));
+    setName(newName);
+    setIsEditing(false);
   };
 
-  const handleDeleteAccount = () => {
-    // In a real app, this would have a proper confirmation flow
-    toast({
-      title: "Not Implemented",
-      description: "Account deletion functionality is not available in this demo.",
-      variant: "destructive",
-    });
-  };
-  
   return (
     <DashboardLayout>
       <div className="space-y-6">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Settings</h1>
-          <p className="text-gray-500">Manage your account settings and preferences.</p>
+          <p className="text-gray-500">Manage your account settings.</p>
         </div>
         
-        <div className="grid gap-6">
-          {/* Profile Settings */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Profile Settings</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleUpdateProfile}>
-                <div className="space-y-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                      Display Name
-                    </label>
-                    <input
-                      id="name"
-                      type="text"
-                      value={editName}
-                      onChange={(e) => setEditName(e.target.value)}
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border"
-                    />
-                  </div>
-                  <Button type="submit">Update Profile</Button>
-                </div>
-              </form>
-            </CardContent>
-          </Card>
+        <div className="bg-white rounded-md shadow p-6">
+          <h2 className="text-xl font-semibold mb-4">Profile</h2>
           
-          {/* Notification Settings */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Notification Settings</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-sm font-medium">Email Notifications</h3>
-                    <p className="text-sm text-gray-500">Receive email notifications about your events</p>
-                  </div>
-                  <div 
-                    className={`w-11 h-6 rounded-full p-1 cursor-pointer ${notifications.email ? 'bg-purple-600' : 'bg-gray-300'}`}
-                    onClick={() => handleNotificationChange('email')}
-                  >
-                    <div 
-                      className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${notifications.email ? 'translate-x-5' : ''}`} 
-                    />
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-sm font-medium">App Notifications</h3>
-                    <p className="text-sm text-gray-500">Receive in-app notifications</p>
-                  </div>
-                  <div 
-                    className={`w-11 h-6 rounded-full p-1 cursor-pointer ${notifications.app ? 'bg-purple-600' : 'bg-gray-300'}`}
-                    onClick={() => handleNotificationChange('app')}
-                  >
-                    <div 
-                      className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${notifications.app ? 'translate-x-5' : ''}`} 
-                    />
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-sm font-medium">Marketing Emails</h3>
-                    <p className="text-sm text-gray-500">Receive marketing and promotional emails</p>
-                  </div>
-                  <div 
-                    className={`w-11 h-6 rounded-full p-1 cursor-pointer ${notifications.marketing ? 'bg-purple-600' : 'bg-gray-300'}`}
-                    onClick={() => handleNotificationChange('marketing')}
-                  >
-                    <div 
-                      className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${notifications.marketing ? 'translate-x-5' : ''}`} 
-                    />
-                  </div>
-                </div>
+          {isEditing ? (
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  value={newName}
+                  onChange={(e) => setNewName(e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
               </div>
-            </CardContent>
-          </Card>
-          
-          {/* Danger Zone */}
-          <Card className="border-red-100">
-            <CardHeader>
-              <CardTitle className="text-red-600">Danger Zone</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-gray-500">
-                Once you delete your account, there is no going back. Please be certain.
-              </p>
-            </CardContent>
-            <CardFooter>
-              <Button 
-                variant="destructive" 
-                onClick={handleDeleteAccount}
+              <div className="flex space-x-2">
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                >
+                  Save
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsEditing(false);
+                    setNewName(name);
+                  }}
+                  className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          ) : (
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm text-gray-500">Name</p>
+                <p className="font-medium">{name}</p>
+              </div>
+              <button
+                onClick={() => setIsEditing(true)}
+                className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
               >
-                Delete Account
-              </Button>
-            </CardFooter>
-          </Card>
+                Edit
+              </button>
+            </div>
+          )}
+        </div>
+        
+        <div className="bg-white rounded-md shadow p-6">
+          <h2 className="text-xl font-semibold mb-4">Preferences</h2>
+          <div className="space-y-3">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="font-medium">Email Notifications</p>
+                <p className="text-sm text-gray-500">Receive emails about your account activity</p>
+              </div>
+              <label className="flex items-center cursor-pointer relative">
+                <input type="checkbox" value="" className="sr-only peer" />
+                <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-purple-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
+              </label>
+            </div>
+            
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="font-medium">Push Notifications</p>
+                <p className="text-sm text-gray-500">Receive push notifications on your device</p>
+              </div>
+              <label className="flex items-center cursor-pointer relative">
+                <input type="checkbox" value="" className="sr-only peer" checked />
+                <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-purple-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+        
+        <div className="bg-white rounded-md shadow p-6">
+          <h2 className="text-xl font-semibold mb-4">Danger Zone</h2>
+          <div>
+            <p className="text-sm text-gray-500 mb-4">Once you delete your account, there is no going back. Please be certain.</p>
+            <button
+              className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+            >
+              Delete Account
+            </button>
+          </div>
         </div>
       </div>
     </DashboardLayout>

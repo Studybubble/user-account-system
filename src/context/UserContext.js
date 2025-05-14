@@ -1,7 +1,7 @@
 
 import React, { createContext, useContext, useState } from "react";
 
-const UserContext = createContext({
+const defaultContext = {
   name: "John Doe",
   setName: () => {},
   wallet: {
@@ -13,7 +13,9 @@ const UserContext = createContext({
   registeredEvents: [],
   registerForEvent: () => {},
   cancelRegistration: () => {},
-});
+};
+
+const UserContext = createContext(defaultContext);
 
 export function UserProvider({ children }) {
   const [name, setName] = useState("John Doe");

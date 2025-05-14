@@ -1,13 +1,15 @@
 
 import React, { createContext, useContext, useState } from "react";
 
-const EventsContext = createContext({
+const defaultContext = {
   events: [],
   getEvent: () => undefined,
   addEvent: () => "",
   updateEvent: () => false,
   deleteEvent: () => false,
-});
+};
+
+const EventsContext = createContext(defaultContext);
 
 // Sample events data
 const initialEvents = [
@@ -105,7 +107,7 @@ export function EventsProvider({ children }) {
       getEvent,
       addEvent,
       updateEvent,
-      deleteEvent,
+      deleteEvent
     }}>
       {children}
     </EventsContext.Provider>

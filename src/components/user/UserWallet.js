@@ -1,10 +1,7 @@
 
 import React from 'react';
 import { useUser } from '../../context/UserContext';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card';
-import { Button } from '../ui/button';
 import { DashboardLayout } from '../DashboardLayout';
-import { toast } from '../ui/toast';
 
 export function UserWallet() {
   const { wallet, redeemDiscount } = useUser();
@@ -12,16 +9,9 @@ export function UserWallet() {
   const handleRedeemDiscount = (discountId) => {
     const success = redeemDiscount(discountId);
     if (success) {
-      toast({
-        title: "Success",
-        description: "Discount redeemed successfully!",
-      });
+      alert("Discount redeemed successfully!");
     } else {
-      toast({
-        title: "Insufficient Points",
-        description: "You don't have enough points to redeem this discount.",
-        variant: "destructive",
-      });
+      alert("Insufficient points to redeem this discount.");
     }
   };
   
@@ -34,46 +24,46 @@ export function UserWallet() {
         </div>
         
         <div className="grid gap-4">
-          <Card>
-            <CardHeader>
-              <CardTitle>Points Balance</CardTitle>
-              <CardDescription>Your current points balance</CardDescription>
-            </CardHeader>
-            <CardContent>
+          <div className="bg-white rounded-lg border shadow-sm p-6">
+            <div className="mb-2">
+              <h3 className="text-2xl font-semibold leading-none tracking-tight">Points Balance</h3>
+              <p className="text-sm text-muted-foreground">Your current points balance</p>
+            </div>
+            <div className="p-6 pt-0">
               <div className="text-4xl font-bold text-purple-600">{wallet.points} Points</div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
           
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-4">Available Discounts</h2>
             <div className="grid gap-4 md:grid-cols-3">
               {wallet.discounts.map(discount => (
-                <Card key={discount.id}>
-                  <CardHeader>
-                    <CardTitle>{discount.name}</CardTitle>
-                    <CardDescription>{discount.percentOff}% off your next purchase</CardDescription>
-                  </CardHeader>
-                  <CardContent>
+                <div key={discount.id} className="bg-white rounded-lg border shadow-sm">
+                  <div className="flex flex-col space-y-1.5 p-6">
+                    <h3 className="text-2xl font-semibold leading-none tracking-tight">{discount.name}</h3>
+                    <p className="text-sm text-muted-foreground">{discount.percentOff}% off your next purchase</p>
+                  </div>
+                  <div className="p-6 pt-0">
                     <p className="text-sm text-gray-500">Cost: {discount.pointCost} points</p>
-                  </CardContent>
-                  <CardFooter>
-                    <Button
+                  </div>
+                  <div className="flex items-center p-6 pt-0">
+                    <button
                       onClick={() => handleRedeemDiscount(discount.id)}
                       disabled={wallet.points < discount.pointCost}
-                      className="w-full"
+                      className="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-purple-600 text-white px-4 py-2 w-full disabled:opacity-50 disabled:pointer-events-none hover:bg-purple-700"
                     >
                       Redeem Discount
-                    </Button>
-                  </CardFooter>
-                </Card>
+                    </button>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
           
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-4">How to Earn Points</h2>
-            <Card>
-              <CardContent className="pt-6">
+            <div className="bg-white rounded-lg border shadow-sm">
+              <div className="p-6">
                 <ul className="list-disc pl-5 space-y-2">
                   <li>Register for events (25 points)</li>
                   <li>Attend events (50 points)</li>
@@ -81,8 +71,8 @@ export function UserWallet() {
                   <li>Complete surveys (20 points)</li>
                   <li>Leave feedback (15 points)</li>
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </div>
